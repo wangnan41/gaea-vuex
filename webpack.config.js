@@ -163,6 +163,10 @@ if (isProduction || isUpload) {
     webpackConfig.output.publicPath = '/';
     webpackConfig.devtool = '#cheap-module-eval-source-map';
     webpackConfig.plugins = (webpackConfig.plugins || []).concat([
+        new HtmlWebpackPlugin({
+            template: './src/index.html'
+
+        }),
         new AddAssetHtmlPlugin({
             filepath: require.resolve('./static/vendor.dll.js'),
             includeSourcemap: false,
