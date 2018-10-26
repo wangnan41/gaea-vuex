@@ -21,8 +21,14 @@
 
 <style lang="scss">
     .vue-skeleton-loading {
-        position: relative;
-        width: 100%;
+        
+        background:#fff;
+        position:fixed;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+        z-index: 9999;
         @keyframes backpos {
             from {
                 background-position-x: -200px;
